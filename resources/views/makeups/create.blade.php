@@ -9,7 +9,41 @@
     </div>
 @endsection
 @section('content')
-<h1>hola</h1>
+{{-- Formulario de crear un maquillaje "Nombre", "Precio", "Marca", "Descripcion"--}}
+<form action="{{ route('makeups.create') }}" method="POST">
+    @csrf
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label
+            @error('name') is-invalid @enderror">Nombre</label>
+            <input type="text" name="name" class="form-control
+            @error('name') is-invalid @enderror" value="{{ old('name') }}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label
+            @error('price') is-invalid @enderror">Precio</label>
+            <input type="number" name="price" class="form-control
+            @error('price') is-invalid @enderror" value="{{ old('price') }}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label
+            @error('brand') is-invalid @enderror">Marca</label>
+            <input type="text" name="brand" class="form-control
+            @error('brand') is-invalid @enderror" value="{{ old('brand') }}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label
+            @error('description') is-invalid @enderror">Descripcion</label>
+            <input type="text" name="description" class="form-control
+            @error('description') is-invalid @enderror" value="{{ old('description') }}">
+        </div>
+    </div>
+    <div class="card-footer">
+        {{-- Regresar a index --}}
+        <a href="{{ route('makeups.index') }}" class="btn btn-secondary">Volver</a>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+</form>
 @endsection
 @section('scripts')
 @endsection
