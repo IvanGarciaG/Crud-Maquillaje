@@ -28,6 +28,10 @@
         <input type="text" name="description" class="form-control" value="{{ $makeup->description }}" readonly>
     </div>
 </div>
+<div class="card-footer">
+    {{-- Regresar a index --}}
+    <a href="{{ route('makeups.index') }}" class="btn btn-secondary">Volver</a>
+</div>
 @endsection
 @section('scripts')
 @endsection

@@ -40,7 +40,7 @@
     </div>
     <div class="card-footer">
         <a href="{{ route('makeups.index') }}" class="btn btn-secondary">Volver</a>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Editar</button>
     </div>
 </form>
 @endsection
