@@ -1,0 +1,12 @@
+.small-logo {
+    height: 140px !important; 
+    width: 140px !important;
+    display: block; 
+    margin: 0 auto; 
+}
+.custom-margin-top {
+    margin-top: 141px !important; /* Ajusta el valor según tus necesidades */
+}
+.custom-margin-top-show {
+    margin-top: 50px !important; /* Ajusta el valor según tus necesidades */
+}
